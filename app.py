@@ -1,5 +1,7 @@
 from flask import Flask, flash, json, redirect, render_template, request, session, jsonify
 import csv
+from flask import Flask
+
 # Configure application
 app = Flask(__name__)
 
@@ -36,3 +38,6 @@ def index():
         res = {"ayat": str, "ayacount": count}
         return jsonify(res)
     return render_template("index.html")
+    
+if __name__ == '__main__':
+    app.run()
